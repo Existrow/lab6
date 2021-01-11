@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Host" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Host" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRequestSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RequestSet" nillable="true" type="tns:RequestSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRequestSet" nillable="true" type="tns:ArrayOfRequestSet" />
+  <xs:complexType name="RequestSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Autor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestSet" nillable="true" type="tns:RequestSet" />
+</xs:schema>
